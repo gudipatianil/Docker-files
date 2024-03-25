@@ -1,0 +1,39 @@
+yum update -y
+vi docker.sh
+sh docker.sh
+mkdir dockerfile
+cd dockerfile
+----------inside dockerfile directory---------
+vi Dockerfile
+cd ..
+--------------inside root user---------------
+docker build -t gudipatianil467/marcos dockerfile/
+docker images
+docker run -it -d gudipatianil467/marcos
+docker ps
+docker ps -a
+docker exec -it 804e79ce6ffb /bin/bas
+------------inside bash 5.4---------
+ls
+cd apache-tomcat-9.0.85
+cd bin/
+ls
+sh startup.sh
+exit
+------------inside root user---------
+vi docker-compose.yml
+cat docker-compose.yml
+docker-compose --version
+docker-compose up -d
+docker images
+docker ps
+docker-compose down
+docker ps -a
+docker images
+docker rmi redis nginx
+docker images
+docker rm -f 945cf723ee4c
+docker rmi amazonlinux gudipatianil467/marcos
+docker images
+docker ps
+

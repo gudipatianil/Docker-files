@@ -1,0 +1,28 @@
+yum update -y
+vi docker.sh
+sh docker.sh
+mkdir dockerfile
+cd dockerfile
+----------inside dockerfile directory---------
+vi Dockerfile
+cd ..
+--------------inside root user---------------
+docker build -t gudipatianil467/marcos dockerfile/
+docker images
+docker run -it -d balamurugankk/marcos
+docker ps
+docker ps -a
+docker exec -it 804e79ce6ffb /bin/bash
+------------inside bash 5.4---------
+ls
+cd apache-tomcat-9.0.85
+cd bin/
+ls
+sh startup.sh
+exit
+------------inside root user---------
+docker ps
+docker images
+docker rm -f 804e79ce6ffb
+docker rmi amazonlinux
+docker rmi gudipatianil467/marcos

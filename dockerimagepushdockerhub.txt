@@ -1,0 +1,21 @@
+vi docker.sh
+sh docker.sh
+sudo yum update -y
+docker pull httpd
+docker images
+docker run -it -d --name webapp httpd
+docker ps
+docker commit 51f1f011cf7b gudipatianil467
+docker login
+docker push gudipatianil467/marcos
+docker ps
+docker ps -a
+docker rm -f 51f1f011cf7b
+docker rmi httpd
+docker images
+docker ps -a
+docker pull gudipatianil467/marcos
+docker images
+docker rmi gudipatianil467/marcos
+docker images
+docker ps

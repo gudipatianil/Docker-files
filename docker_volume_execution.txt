@@ -1,0 +1,41 @@
+yum update -y
+vi docker.sh
+sh docker.sh
+docker pull httpd
+docker run -it -d httpd
+docker ps
+docker images
+docker exec -it bce722cea03b /bin/bash
+-----------inside apache2------------
+ls
+pwd
+cd htdocs
+cat index.html
+exit
+------------inside root user-----------
+docker volume ls
+docker volume anil
+docker volume create anil
+docker volume ls
+docker volume inspect anil
+cd /var/lib/docker/volumes
+ls
+cd anil/
+ls
+docker images
+docker volume ls
+docker run -it -d -v /var/lib/docker/volumes/anil/_data httpd
+docker ps
+docker exec -it dae383c79421 /bin/bash
+------------inside apache2-----------
+ls
+cd htdocs
+cat index.html
+exit
+------------inside root user------------
+cd /var/lib/docker/volumes
+ls
+cd anil
+ls
+cd _data/
+ls

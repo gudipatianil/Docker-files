@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven'
+    }
+    stages {
+        stage('git clone') {
+            steps {
+                git 'https://github.com/gudipatianil467/maven WebApp-2.git'
+            }
+        }
+        stage('compile') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
+        stage('what') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+    }
+}
